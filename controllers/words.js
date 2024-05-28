@@ -59,7 +59,7 @@ router.delete('/:wordId',async (req, res) => {
 router.put('/:wordId',async (req, res) => {
     try {
        
-    const updatedPet = await Word.findByIdAndUpdate(req.params.petId, req.body, {new: true })
+    const updatedWord = await Word.findByIdAndUpdate(req.params.petId, req.body, {new: true })
     res.status(201).json(updatedWord); 
     } catch (error) {
         res.status(404).json({error: error.message})
